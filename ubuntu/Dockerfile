@@ -59,6 +59,10 @@ RUN apt-get update && \
 	apt-get install -y nodejs && \
 	apt-get install -y man && \
 	apt-get clean all
+	
+RUN node --version
+
+RUN npm --version
 
 # A better fix for TW-52939 Dockerfile build fails because of aufs
 VOLUME /var/lib/docker
